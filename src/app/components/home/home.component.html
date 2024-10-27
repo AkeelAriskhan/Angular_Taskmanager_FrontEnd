@@ -1,0 +1,12 @@
+
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <!-- Navbar content -->
+    <div class="container-fluid">
+        <a class="navbar-brand">Task Manager</a>
+        <form class="d-flex justify-content-around" role="search">
+          <button class="btn btn-outline-success" type="submit" [routerLink]="['/toUser']"  >User</button>
+          
+          <button class="btn btn-outline-success" type="submit"  [routerLink]="['/toTask']">Task</button>
+        </form>
+      </div>
+  </nav>

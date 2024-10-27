@@ -1,0 +1,42 @@
+<form [formGroup]="profileForm1" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">id</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="id">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">name</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" formControlName="name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword2" class="form-label">email</label>
+        <input type="text" class="form-control" id="exampleInputPassword2" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword3" class="form-label">password</label>
+        <input type="password" class="form-control" id="exampleInputPassword3" formControlName="password">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword4" class="form-label">phone</label>
+        <input type="text" class="form-control" id="exampleInputPassword4" formControlName="phone">
+      </div>
+      <div  class="mb-3" formGroupName="address">
+
+        <div class="mb-3">
+          <label for="exampleInputPassword7" class="form-label">firstLane</label>
+          <input type="text" class="form-contro4" id="exampleInputPassword7" formControlName="firstLane">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword8" class="form-label">secondLane</label>
+          <input type="text" class="form-contro5" id="exampleInputPassword8" formControlName="secondLane">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword9" class="form-label">city</label>
+          <input type="text" class="form-contro6" id="exampleInputPassword9" formControlName="city">
+        </div>
+      </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-secondary">close</button>
+
+  </form>
