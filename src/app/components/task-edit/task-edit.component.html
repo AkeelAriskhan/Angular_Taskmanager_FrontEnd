@@ -22,7 +22,34 @@
 
         </select>
       </div>
+
+      <div formArrayName="cheaklists">
+        <div class="row">
+          <p>xx {{cheaklistss.controls}}</p>
+          <div class="col-12" *ngFor="let cheaklist of cheaklistss.controls; let i = index" >
+            <div class="row" [formGroupName]="i">
+              <div class="col-8">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="flexCheckChecked-{{i}}" formControlName="isDone"  checked>
+                  <label class="form-check-label" for="flexCheckChecked-{{i}}">
+                    Checked checkbox
+                  </label>
+                </div>
+                <input type="text" class="form-control" id="exampleInputPassword1" formControlName="name">
+              </div>
+              <div class="col-4">
+                <button type="submit" class="btn btn-danger mt-4" (click)="removCeheckList(i)">remove</button>
+              </div>
+            </div>
+           
+          
+          </div>
+         
+        </div>
+        <button type="submit" class="btn btn-success mt-1" (click)="addCheckList()">Add</button>
+      </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="submit" class="btn btn-secondary">close</button>
 
   </form>
+

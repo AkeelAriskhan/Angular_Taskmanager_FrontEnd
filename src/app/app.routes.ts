@@ -6,9 +6,9 @@ import { HomeComponent } from './components/home/home.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent},
     { path: 'toUser', component: UserListComponent },
 
     { path: 'toTask', component: TaskListComponent },
@@ -16,5 +16,7 @@ export const routes: Routes = [
     { path: 'addUser', component: UserAddComponent },
 
     { path: 'edit/:id', component: TaskEditComponent },
-    {path:'useredit/:id',component:UserEditComponent}
+    {path:'useredit/:id',component:UserEditComponent},
+    {path:'signup',component:SignupComponent}
+
 ];

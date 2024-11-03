@@ -53,7 +53,7 @@
           </div>
          
         </div>
-        <button type="submit" class="btn btn-success mt-1" (click)="addCheckList()">Add</button>
+        <button *ngIf="checkList.length < 3" type="submit" class="btn btn-success mt-1" (click)="addCheckList()">Add</button>
       </div>
     </div>
 

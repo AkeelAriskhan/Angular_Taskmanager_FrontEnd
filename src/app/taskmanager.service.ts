@@ -35,6 +35,13 @@ export interface Task{
   description:string;
   duedate:string;
   priority :string;
-  user:User
+  user:User;
+  cheakLists: CheckList[];
+}
+
+export interface CheckList {
+  id: number;
+  name: string;
+  isDone: boolean
 }
 
