@@ -7,6 +7,7 @@ import { UserListComponent } from './components/user-list/user-list.component';
 import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 export const routes: Routes = [
     { path: 'toUser', component: UserListComponent },
@@ -17,6 +18,9 @@ export const routes: Routes = [
 
     { path: 'edit/:id', component: TaskEditComponent },
     {path:'useredit/:id',component:UserEditComponent},
-    {path:'signup',component:SignupComponent}
+    {path:'signup',component:SignupComponent},
+    {path:'signin',component:SigninComponent}
+
+
 
 ];
