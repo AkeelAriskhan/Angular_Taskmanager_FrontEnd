@@ -37,7 +37,7 @@ if(conform ){
   }
   this.singnupservise.Createsingnup(finalUser).subscribe(data=>{
     console.log(data);
-    this.router.navigate(['/signin'])
+    this.router.navigate(['/'])
     // this.router.navigate(['/toUser'])
 
     

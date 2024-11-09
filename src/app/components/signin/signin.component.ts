@@ -33,10 +33,13 @@ export class SigninComponent {
     this.singupservise.singnin(lohinuser).subscribe({
       next:(data:any) => {
         console.log(data)
+       alert("logedin");
+        
       },complete:()=>{
         this.toastar.success("Login Success")
       },error:(error:any)=>{
         this.toastar.warning(error.error)
+        alert('hi')
      
       }
     })
