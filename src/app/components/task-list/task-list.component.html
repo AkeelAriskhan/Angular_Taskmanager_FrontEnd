@@ -4,7 +4,7 @@
     <input type="text" class="form-control" placeholder="Serch Task" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div>
-    <button class="btn btn-secondary" [routerLink]="['/add']" ><i class="bi bi-plus-lg"></i> New Task</button>
+    <button class="btn btn-secondary" [routerLink]="['/Admin/add']" ><i class="bi bi-plus-lg"></i> New Task</button>
 
 
   </div>
@@ -39,7 +39,7 @@
 
         <td>{{task.priority}}</td>
         <td >
-          <button type="button" class="btn btn-primary me-1 "  routerLink="/edit/{{task.id}}"><i class="bi bi-pen-fill"></i></button>
+          <button type="button" class="btn btn-primary me-1 "  routerLink="/Admin/edit/{{task.id}}"><i class="bi bi-pen-fill"></i></button>
            <button class="btn btn-danger" (click)="ondelete(task.id)"> <i class="bi bi-trash-fill"></i></button></td>
       </tr>
      

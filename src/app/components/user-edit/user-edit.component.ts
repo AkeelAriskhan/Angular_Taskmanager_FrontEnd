@@ -47,7 +47,7 @@ export class UserEditComponent implements OnInit {
     user.id=this.taskid
     this.userservice.updateuser(user).subscribe(data=>{
       this.tostarservise.success("taskupdateed");
-      this.router.navigate(['/toUser'])
+      this.router.navigate(['/Admin/toUser'])
       
     })
   }

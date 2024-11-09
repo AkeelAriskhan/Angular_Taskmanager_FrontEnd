@@ -7,7 +7,7 @@
       <input type="text" class="form-control" placeholder="Serch User" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div>
-      <button class="btn btn-secondary" [routerLink]="['/addUser']" ><i class="bi bi-plus-lg"></i> New User</button>
+      <button class="btn btn-secondary" [routerLink]="['/Admin/addUser']" ><i class="bi bi-plus-lg"></i> New User</button>
   
   
     </div>
@@ -40,7 +40,7 @@
           <td>{{user.address?.firstLane}},{{user.address?.secondLane}},{{user.address?.city}}</td>
           
           <td >
-            <button type="button" class="btn btn-primary me-1 "  routerLink="/useredit/{{user.id}}"><i class="bi bi-pen-fill"></i></button>
+            <button type="button" class="btn btn-primary me-1 "  routerLink="/Admin/useredit/{{user.id}}"><i class="bi bi-pen-fill"></i></button>
              <button class="btn btn-danger" (click)="ondelete(user.id)"> <i class="bi bi-trash-fill"></i></button></td>
         </tr>
        

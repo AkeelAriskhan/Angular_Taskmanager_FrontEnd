@@ -4,9 +4,9 @@
     <div class="container-fluid">
         <a class="navbar-brand">Task Manager</a>
         <form class="d-flex justify-content-around" role="search">
-          <button class="btn btn-outline-success" type="submit" [routerLink]="['/toUser']"  >User</button>
+          <button class="btn btn-outline-success" type="submit" [routerLink]="['/Admin/toUser']"  >User</button>
           
-          <button class="btn btn-outline-success" type="submit"  [routerLink]="['/toTask']">Task</button>
+          <button class="btn btn-outline-success" type="submit"  [routerLink]="['/Admin/toTask']">Task</button>
         </form>
       </div>
   </nav>
@@ -26,13 +26,13 @@
           </a>
         </li>
         <li>
-          <a routerLink="/toUser"  routerLinkActive="active" href="#" class="nav-link text-white">
+          <a routerLink="/Admin/toUser"  routerLinkActive="active" href="#" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                User
           </a>
         </li>
         <li>
-          <a routerLink="/toTask"  routerLinkActive="active" href="#" class="nav-link text-white">
+          <a routerLink="/Admin/toTask"  routerLinkActive="active" href="#" class="nav-link text-white">
             <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
                Task
           </a>

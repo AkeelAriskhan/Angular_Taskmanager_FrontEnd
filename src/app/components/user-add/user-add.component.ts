@@ -36,7 +36,7 @@ export class UserAddComponent {
     console.log(user);
     
        this.userservice.createuser(user).subscribe(data=>{
-        this.router.navigate(['/toUser'])
+        this.router.navigate(['/Admin/toUser'])
        })
   }
 }
