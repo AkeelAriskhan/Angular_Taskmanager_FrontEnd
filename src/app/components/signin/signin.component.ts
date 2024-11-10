@@ -33,6 +33,9 @@ export class SigninComponent {
     this.singupservise.singnin(lohinuser).subscribe({
       next:(data:any) => {
         console.log(data)
+        localStorage.setItem("token",data.token);
+       this.router.navigate(['/Admin/toUser'])
+
        alert("logedin");
         
       },complete:()=>{

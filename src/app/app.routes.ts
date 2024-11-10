@@ -9,22 +9,16 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { BlanklayoutComponent } from './components/blanklayout/blanklayout.component';
+import { AuthGuard } from './components/auth-guard.guard';
+
 
 export const routes: Routes = [
 
-      {
-        path:'',
-        component:BlanklayoutComponent,
-        children:
-        [
-            {path:'signup',component:SignupComponent},
-            {path:'',component:SigninComponent}
-        ]
-
-      },
+     
       {
         path:'Admin',
         component:HomeComponent,
+        canActivate:[AuthGuard],
         children:
         [
             { path: 'toUser', component: UserListComponent },
@@ -38,12 +32,16 @@ export const routes: Routes = [
         ]
 
       },
+      {
+        path:'',
+        component:BlanklayoutComponent,
+        children:
+        [
+            {path:'signup',component:SignupComponent},
+            {path:'signin',component:SigninComponent},
+            {path:'**',redirectTo:'signin',pathMatch:'full'}
+        ]
 
-
-
- 
-   
-
-
+      }
 
 ];

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { jwtDecode } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +14,13 @@ export class SingupService {
 
   }
   singnin(user:any){
-    return this.http.post<any>('http://localhost:5197/api/UserLogins/login',user)
+    return this.http.post('http://localhost:5197/api/UserLogins/login',user);
+  }
+  isLoggedIN(){
+    if(localStorage.getItem("token") !== null){
+      return true;
+    }else{
+      return false;
+    }
   }
 }
